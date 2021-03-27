@@ -1,0 +1,9 @@
+FROM centos:8
+MAINAINER 705jul
+LABEL "purpos"="TEST"
+RUN yum install httpd -y
+ADD test.html /var/www/html
+WORKDIR /var/www/html
+RUN ["/bint/bash", "-c", "echo hello >> test2.html"]
+EXPOSE 80
+CMD apachectl -DEFOREGROUND

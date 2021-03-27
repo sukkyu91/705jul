@@ -1,5 +1,5 @@
 FROM centos:8
-MAINAINER 705jul
+MAINTAINER 705jul
 LABEL "purpos"="TEST"
 RUN yum install httpd -y
 ADD test.html /var/www/html
